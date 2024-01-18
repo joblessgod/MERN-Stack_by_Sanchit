@@ -14,4 +14,8 @@
 
 <!-- Day to day -->
 > git add .
+> git commit -m "varibale"
 > git push
+
+<!-- To pull -->
+> git pull
