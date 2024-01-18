@@ -15,3 +15,8 @@
 <!-- Day to day -->
 > git add .
 > git push
+
+<!-- pull latest codes   -->
+<!-- pull -->
+git fetch // optional  // sync 
+git pull // pull codes 
