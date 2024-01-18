@@ -11,3 +11,7 @@
 > git push
 <!-- to clone anyone's repo -->
 > git clone https://github.com/joblessgod/MERN-Stack_by_Sanchit
+
+<!-- Day to day -->
+> git add .
+> git push
