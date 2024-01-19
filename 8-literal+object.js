@@ -45,12 +45,7 @@
 
 let todoList = [
     {
-        // title: "Varible",
-        title: {
-            name: "variable",
-            description: "A JavaScript variable is a named storage for holding data values.",
-        }
-        // description: "A JavaScript variable is a named storage for holding data values.",
+        title:  "variable",
         status: "completed",
         createdAt: "2024-01-07",
     },
@@ -90,4 +85,3 @@ console.log(`${todoList[2].title} created at ${todoList[2].createdAt} is ${todoL
 console.log(`${todoList[3].title} created at ${todoList[3].createdAt} is ${todoList[3].status}!`);
 console.log(`${todoList[4].title} created at ${todoList[4].createdAt} is ${todoList[4].status}!`);
 console.log(`${todoList[5].title} created at ${todoList[4].createdAt} is ${todoList[5].status}!`);
-

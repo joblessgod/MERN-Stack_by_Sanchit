@@ -18,4 +18,6 @@
 > git push
 
 <!-- To pull -->
-> git pull
+> git fetch // optional // to sync changes
+> git restore . // to revert back changes to previus commit history
+> git pull // to pull actual codes.
