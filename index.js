@@ -1,33 +1,69 @@
-// function printStatus(index) {
-    
-// }
+// console.log("Hi \n  Hi");
+/* compatision operators] */
+/* 
+console.log("one" == "one");
+console.log(" 1" == "1");
+
+let HI = 100
+console.log({HI});
+HI = HI + 1
 
 
-// Sum funtion / SW
-// double(2) // 2*2 =4
-// double(6) // 2*6 =12
+console.log(HI);
+console.log(HI += 1);
+ */
 
-/* Solution */
+/* pre-increament & post-increment*/
+/* let age = 20
+//  number++
+//  ++number
+console.log(age++); // updates number in backgorund
+console.log(++age); // instant number updates
+ */
+/* 
+comfitional statements 
+if else
+*/
+/* 
+let isCold = true;
 
-///* Multiply */
-function double(input){
-
-    let result = 2 * input;
-    console.log(`2 * ${input} = ${result}`);
+if (isCold) {
+    console.log("need jacket");
+} else {
+    console.log("no need jacket.");
 }
-double(2)
 
-///* Sum */
-function sum(input_1, input_2){
-    result = input_1 + input_2;
-    console.log(`${input_1} + ${input_2} = ${result}`);
+
+let num1 = 1
+let num2 = 2
+// console.log(num1 < num2); // no need
+if (num1 > num2) {
+    console.log("Less");
+} else {
+    console.log("Great");
 }
-sum(4, 7)
-
-///* Multiple Sum */
-function sumAgain(input1, input2, input3){
-        result = input1 + input2 + input3;
-        console.log(`${input1} + ${input2} + ${input3} = ${result}`);
+ */
+let employee1 = {  // Don't use array
+    name: "ram",
+    role: "reception",
+};
+let employee2 = {
+    name: "sita",
+    role: "manager",
+};
+let employee3 = {
+    name: "hari",
+    role: "super viser",
 }
 
-sumAgain(2, 3, 4)
+function vaultAccess(employee) {
+    let allowedRole = "manager"
+    if (employee.role == allowedRole) {
+        console.log(`${employee.name} can acces vault.`);
+    } else {
+        console.log(`${employee.name} can't access vault.`);
+    }
+}
+vaultAccess(employee1)
+vaultAccess(employee2)
+vaultAccess(employee3)
