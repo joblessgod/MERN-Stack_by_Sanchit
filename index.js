@@ -1,55 +1,32 @@
 /* 
-function getMonth(monthNumber) {
-    if
-    else if (monthNumber == 1) {
-        return "Jan"
-    } else if (monthNumber == 2) {
-        return "Feb"
-    } else if (monthNumber == 3) {
-        return "Mar"
-    } else if (monthNumber == 4) {
-        return "Apr"
-    } else if (monthNumber == 0) {
-        return "Invalid Number, Please type between 1 - 12"
-    } else {
-        return "Invalid, Please input number between 1 - 12"
-    }
-
-
+let student = {
+    name: "ram",
+    paidStatus: false,
+    hasScholorship: true,
+    fulFillAttendence: false,
 }
-console.log(getMonth(1));
- */
-
-
-
-let todos = [
-    {
-        title: "html",
-        status: true,
-        sameTeacher: true
-    },
-    {
-        title: "loop",
-        status: false,
-        sameTeacher: true
-    },
-    {
-        title: "Java",
-        status: false,
-        sameTeacher: false
-    },
-]
-function todoCheck(index) {
-    if (todos[index].status) {
-        console.log(`${todos[index].title} is completed.`);
-    } if (todos[index].sameTeacher) {
-        console.log(`- Teacher was same.`);
-    } else {
-        console.log(`Teacher wasnot same.`);
-    } if (todos[index].status) {
-        console.log(`${todos[index].title} is pending.`);
-    }
+let { name, paidStatus, hasScholorship, fulFillAttendence } = student
+// New Way
+if ((paidStatus || hasScholorship) && fulFillAttendence) {
+    console.log(`${name} can enroll.`);
+} else {
+    console.log(`${name} cannot enroll.`);
 }
-todoCheck(0)
-todoCheck(1)
-todoCheck(2)
+
+
+function printSum(num1=0, num2=0, num3=0, num4=0){
+    return num1+num2+num3+num4;
+}
+console.log(printSum(2,3));
+console.log(printSum(2,3,4));
+console.log(printSum(2,3,4,5));
+*/
+
+
+/* Practice */
+
+const sum = (num1, num2, ...rest) => {
+    console.log({rest});
+    return num1 + num2;
+}
+console.log(sum(2, 3, 100, 200, 300));
