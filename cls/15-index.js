@@ -25,8 +25,3 @@ console.log(printSum(2,3,4,5));
 
 /* Practice */
 
-const sum = (num1, num2, ...rest) => {
-    console.log({rest});
-    return num1 + num2;
-}
-console.log(sum(2, 3, 100, 200, 300));
