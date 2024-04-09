@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Task</title>
+    <link rel="stylesheet" href="todos.css"/>
+    
+</head>
+
+<body>
+    <h1>Todos List</h1>
+    <form onsubmit="addTodo(event)">
+        <input required id="input-title" type="text" placeholder="Put todo tasks">
+        <button>+ Task</button>
+
+    </form>
+    <hr>
+    <ul id="todos-list">
+        <li>JLG learning at MindRisers <button>👈 Testing Task Message</button></li>
+        <!-- <li>css</li>
+        <li>js</li>  -->
+    </ul>
+</body>
+<script src="./todos.js"></script> 
+</html>

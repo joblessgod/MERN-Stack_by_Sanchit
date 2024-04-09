@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Party</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            background-color: hsl(0, 1%, 32%);
+        }
+        .gallery 
+        .gallery {
+            display: inline-block;
+            border: 4px solid;
+            border-color: black;
+            margin: 5px;
+        }
+
+        .gallery .itemName {
+            padding: 10px;
+            font-family: cunia;
+            font-size: 25px;
+            background-color: hsl(204, 36%, 68%);
+        }
+
+        .gallery:hover {
+            zoom: 1.1;
+            border-color: black;
+            cursor: pointer;
+
+        }
+
+        .gallery .itemName:hover {
+            background-color: gray;
+            cursor: pointer;
+        }
+        .hightlight {
+            background-color: white;
+            padding-left: 1.9px;
+            padding-right: 1.9px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="font-family: cunia;">List of Products Party</h1>
+    <details style="font-family: cunia;">If you <span class="hightlight">hover</span> and click any images, you will <span class="hightlight">zoom</span> that images redirect to full size iamges.</details>
+    <hr>
+    <ul id="listOfProducts">
+        <!-- <li>Iphone 15 (Out of aukaat)</li> -->
+    </ul>
+
+    <script>
+        let products = []
+        function fetchListAPI() {
+
+            axios.get("https://dummyjson.com/products/",)
+                .then((resp) => {
+                    console.log(resp.data.products);
+
+                    let makeListProducts = ``;
+                    resp.data.products.forEach((el) => {
+                        makeListProducts += `<div class = "gallery">
+                            <a target = "_blank" href = "${el.thumbnail}"> <img src = "${el.thumbnail}"/> </a>
+                            <ul class = "itemName">${el.title}</ul>
+                            </div>`
+                    })
+                    document.getElementById("listOfProducts").innerHTML = makeListProducts;
+                })
+        }
+        fetchListAPI()
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo API</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        .statusBtn {
+            cursor: pointer;
+            color: rgb(33, 80, 80);
+            border: 2px solid;
+            border-radius: 7px;
+        }
+
+        .delBtn {
+            background-color: #67212a;
+            cursor: pointer;
+            /* color: rgb(33, 80, 80); */
+            border: 2px solid;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h1>Todo API </h1>
+        <hr>
+        <input required id="title" type="text" placeholder="Add Tasks">
+        <button>Submit</button>
+    </form>
+    <button onclick = "delAllTodo('${el._id}')">⚠️ Delete All</button>
+    <hr>
+    <ul id="todos-api-list">
+        <li>html</li>
+        <li>css</li>
+    </ul>
+
+    <script>
+        let todos = []
+        // let delTodo = []
+        function createTodoAPI(e) {
+            e.preventDefault();
+            axios.post("https://todo-api-dom.vercel.app/api/todos/", {
+                title: document.getElementById("title").value
+            })
+                .then((resp) => {
+                    fetchTodos()
+                })
+        }
+
+        function fetchTodos() {
+            axios.get("https://todo-api-dom.vercel.app/api/todos/")
+                .then((resp) => {
+                    console.log(resp.data.data);
+
+                    let printOutput = ``;
+                    resp.data.data.forEach((el, index) => {
+                        printOutput += `<li> ${el.title} <button class="statusBtn" onclick = "toggleStatus(' ${el._id} ')">${el.status}</button>
+                            <button class = "delBtn" onclick = "delTodo('${el._id}')">⚠️ Delete </button> </li>`
+                    })
+
+                    // printOutput += `<li>${resp.data.data}</li>`
+                    document.getElementById("todos-api-list").innerHTML = printOutput;
+                    todos = resp.data.data
+                })
+
+                .catch(err => {
+                    console.log(err);
+                    document.getElementById("todos-api-list").innerHTML = "Sanchit, Try Again"
+                })
+
+        }
+
+        function delTodo(_id) {
+            console.log("delTodo_id", _id);
+            console.log(delTodo);
+            axios.delete("https://todo-api-dom.vercel.app/api/todos/" + _id, {
+            }).then((resp) => {
+                fetchTodos()
+            })
+        }
+        function delAllTodo(_id) {
+            console.log("delTodo_id", _id);
+            console.log(delTodo);
+            axios.delete("https://todo-api-dom.vercel.app/api/todos/")
+            .then((resp) => {
+                fetchTodos()
+            })
+        }
+
+
+        fetchTodos()
+        function toggleStatus(_id) {
+            console.log("todo_id", _id);
+            console.log(todos);
+            axios.put("https://todo-api-dom.vercel.app/api/todos/" + _id, {
+                status: !todos.find(el => el._id == _id).status
+            }).then((resp) => {
+                fetchTodos()
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme</title>
+    <style>
+        .dark {
+            background-color: rgb(100, 100, 100);
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body id="body" class="">
+    <button class="" id="dark-btn" onclick="toDarkMode()">Dark Mode</button>
+    <button class="hidden" id="light-btn" onclick="toLightMode()">Light Mode</button>
+    <button id="toggleThemeMode" onclick="toggleTheme()">Toggle Theme Mode</button>
+
+
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, harum laborum vel odio incidunt fugit soluta
+        voluptates ab error, cum voluptatum nulla expedita alias sit inventore exercitationem? Eum, tempore! Soluta!</p>
+
+
+    <script>
+        function toDarkMode() {
+            document.getElementById("body").classList.add("dark")
+            document.getElementById("dark-btn").classList.add("hidden")
+        }
+        function toLightMode() {
+            document.getElementById("body").classList.remove("light")
+
+        }
+        function toggleTheme() {
+                
+            // document.getElementById("body").classList.toggle("dark")
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
