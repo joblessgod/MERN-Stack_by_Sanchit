@@ -5,6 +5,7 @@ let student = {
     hasScholorship: true,
     fulFillAttendence: false,
 }
+ // code is changed, Sanchit Sir
 let { name, paidStatus, hasScholorship, fulFillAttendence } = student
 // New Way
 if ((paidStatus || hasScholorship) && fulFillAttendence) {
