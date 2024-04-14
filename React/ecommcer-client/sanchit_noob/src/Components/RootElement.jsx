@@ -6,19 +6,21 @@ import { IoLogIn } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
 import { FaAngleDown } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
+import { MdOutlinePhoneInTalk } from "react-icons/md";
 
 
 export default function RootElement() {
     return (
         <>
-            <div>
+            <div className=''>
                 {/* upper Nav */}
-                <nav className='bg-[#7E33E0] text-white flex justify-center gap-10 h-[44px]'>
-                    <div className=''>
+                <nav className=' bg-[#7E33E0] text-white flex justify-between gap-10 h-[44px] items-center'>
+                    <div className='font-Josefin flex justify-between gap-10'>
                         <a href="mailto:mhhasanul@gmail.com"> <IoMail className='inline-block align-middle' /> mhhasanul@gmail.com</a>
+                        <a href="mailto:mhhasanul@gmail.com"> <MdOutlinePhoneInTalk className='inline-block align-middle' /> (12345)67890</a>
                     </div>
 
-                    <div className='flex gap-3'>
+                    <div className='flex gap-3 '>
                         <span className='font-sans'>English<FaAngleDown className='inline-block' /></span>
                         <span className='font-sans'>USD<FaAngleDown className='inline-block' /></span>
                         <Link to="/login" className='font-sans'>Login <IoLogIn className='inline-block' /></Link>
@@ -28,12 +30,12 @@ export default function RootElement() {
                 </nav>
 
                 {/* Button Nav */}
-                <nav className='flex justify-center gap-20 h-[40px] '>
+                <nav className='flex justify-center gap-20 h-[40px] items-center' >
                     <div>
-                        <Link to="/">Hekto</Link>
+                        <Link className='font-Josefin' to="/">Hekto</Link>
                     </div>
 
-                    <div className='flex justify-center gap-5'>
+                    <div className='flex justify-center gap-5 font-Lato'>
                         <Link to="/">Home<FaAngleDown className='inline-block' /></Link>
                         <Link to="/pages">Pages</Link>
                         <Link to="/products">Products</Link>

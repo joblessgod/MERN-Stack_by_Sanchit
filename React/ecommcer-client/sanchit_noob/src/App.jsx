@@ -14,7 +14,7 @@ import Contact from "./pages/Contact";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <RootElement />,
+    element: <RootElement x/>,
     children: [
       {
         path: "",
