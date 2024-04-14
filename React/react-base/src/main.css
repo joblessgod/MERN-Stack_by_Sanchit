@@ -8,6 +8,10 @@ body {
     scroll-behavior: smooth;
 }
 
+header{
+   display: flex;
+   gap: 10px;
+}
 .todos {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
