@@ -8,4 +8,12 @@
     .container{
         @apply mx-auto max-w-[1167px]
     }
+    .leading-auto{
+        @apply leading-[normal]
+    }
+    
+}
+
+#hoverPage:hover{
+    color: #FB2E86;
 }

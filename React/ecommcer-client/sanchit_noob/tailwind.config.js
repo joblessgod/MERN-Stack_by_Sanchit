@@ -12,6 +12,11 @@ export default {
         'Josefin': ['"Josefin Sans"', ...defaultTheme.fontFamily.sans],
         'Lato': ['"Lato"', ...defaultTheme.fontFamily.sans],
       },
+      colors:{
+        primary: "#7E33E0",
+        "primary-dark": "#0D0E43",
+        secondary: "#FB2E86"
+      }
     }
   },
   plugins: [],
