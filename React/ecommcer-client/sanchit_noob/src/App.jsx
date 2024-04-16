@@ -1,6 +1,6 @@
 import React from "react"
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
-import RootElement from "./Components/RootElement";
+import RootElement from "./components/RootElement";
 
 /* Pages Import */
 import Home from "./pages/Home";
