@@ -1,23 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    .container{
-        @apply px-3 mx-auto max-w-[1167px]
-    }
-    .leading-auto{
-        @apply leading-[normal]
-    }
-    
+@layer components {
+  .container {
+    @apply mx-auto max-w-full px-3 sm:max-w-[549px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1170px];
+  }
+
+  .leading-auto {
+    @apply leading-[normal];
+  }
 }
 
-#hoverPage:hover{
-    color: #FB2E86;
-}
-
-*{
-    background-color: rgba(255 , 0,0, 0.03);
+* {
+  background-color: rgba(50, 48, 48, 0.206);
 }
