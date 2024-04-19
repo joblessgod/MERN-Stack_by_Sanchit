@@ -51,9 +51,13 @@ export default function Header() {
           </nav>
         </div>
 
+
+
+
+    
         {/* Button Home Nav */}
         <nav className=" container justify-between   pb-[12px] pt-[18px] sm:flex ">
-          <div className="flex  w-full   items-center md:gap-4 ">
+          <div className="flex  w-full items-center md:gap-4 ">
             <a
               className="leading-auto font-Josefin text-[34px] text-primary-dark"
               href="/"
@@ -87,9 +91,9 @@ export default function Header() {
             </div>
             <IoMenu className="text-3xl md:hidden " />
           </div>
-
+    
           <form className="hidden lg:flex">
-            <input
+            <input  
               className="border-primary-light border px-2 py-1 focus:border-secondary focus:outline-none focus:transition-all "
               type="text"
               placeholder="Search"
